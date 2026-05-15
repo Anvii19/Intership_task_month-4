@@ -1,0 +1,47 @@
+1. Technologies Used :
+
+Technology	                  Purpose
+
+Python	        -          Main programming
+Tkinter         -            	GUI
+BeautifulSoup	  -        Web scraping
+Requests        -      	API & website requests
+Psutil	        -       System monitoring
+Schedule	      -           Task scheduling
+SMTP	          -         Email automation
+Logging	        -          Error tracking
+
+2. Install Required Libraries :
+pip install requests beautifulsoup4 psutil schedule pandas
+
+3. Project Structure :
+automation_suite/
+│
+├── main.py
+├── config.py
+│
+├── file_organizer/
+│   └── organizer.py
+│
+├── web_scraper/
+│   └── scraper.py
+│
+├── email_automation/
+│   └── email_sender.py
+│
+├── system_monitor/
+│   └── monitor.py
+│
+├── task_scheduler/
+│   └── scheduler.py
+│
+├── gui/
+│   └── app.py
+│
+├── utils/
+│   └── logger.py
+│
+├── logs/
+│
+└── templates/
+
