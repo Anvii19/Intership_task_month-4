@@ -1,0 +1,54 @@
+GUI INTERFACE :
+
+File: gui/app.py
+import tkinter as tk
+from tkinter import filedialog, messagebox
+
+from file_organizer.organizer import organize_files
+from system_monitor.monitor import system_status
+
+def organize():
+
+    folder = filedialog.askdirectory()
+
+    if folder:
+        organize_files(folder)
+        messagebox.showinfo("Success", "Files Organized")
+
+def monitor():
+
+    report = system_status()
+
+    message = ""
+
+    for key, value in report.items():
+        message += f"{key}: {value}%\n"
+
+    messagebox.showinfo("System Monitor", message)
+
+root = tk.Tk()
+
+root.title("Automation Suite")
+root.geometry("500x400")
+
+title = tk.Label(root,
+                 text="Comprehensive Automation Suite",
+                 font=("Arial", 18))
+
+title.pack(pady=20)
+
+btn1 = tk.Button(root,
+                 text="Organize Files",
+                 command=organize,
+                 width=25)
+
+btn1.pack(pady=10)
+
+btn2 = tk.Button(root,
+                 text="System Monitor",
+                 command=monitor,
+                 width=25)
+
+btn2.pack(pady=10)
+
+root.mainloop()
