@@ -1,0 +1,18 @@
+SYSTEM MONITOR MODULE :
+
+File: system_monitor/monitor.py
+import psutil
+
+def system_status():
+
+    cpu = psutil.cpu_percent()
+    memory = psutil.virtual_memory().percent
+    disk = psutil.disk_usage('/').percent
+
+    report = {
+        "CPU Usage": cpu,
+        "Memory Usage": memory,
+        "Disk Usage": disk
+    }
+
+    return report
