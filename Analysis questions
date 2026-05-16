@@ -1,0 +1,21 @@
+Analysis Questions — Answer
+
+Q1. How can automation improve productivity?
+
+Answer: Automation reduces repetitive manual work, saves time, minimizes human errors, improves efficiency, and allows users to focus on important tasks.
+
+Q2. Ethical considerations in web scraping?
+
+Answer: Web scraping should respect website terms of service, avoid overloading servers, protect user privacy, and collect only publicly available data.
+
+Q3. How to make automation tools user-friendly?
+
+Answer: By providing GUI interfaces, simple navigation, clear error messages, documentation, and customizable settings.
+
+Q4. Security measures needed?
+
+Answer: Use authentication, encrypted credentials, secure APIs, logging, exception handling, and access control mechanisms.
+
+Q5. How to test automation workflows?
+
+Answer: Through unit testing, integration testing, validating outputs, handling edge cases, and monitoring logs.
