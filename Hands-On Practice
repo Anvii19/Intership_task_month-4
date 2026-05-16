@@ -1,0 +1,223 @@
+ # Hands-On Practice Solution — Automation & Scripting
+
+# 1. Build Web Scrapers for Different Websites
+
+## Purpose
+
+Web scraping extracts data from websites automatically.
+
+## Install Libraries
+
+```bash id="3m5spj"
+pip install requests beautifulsoup4
+
+## Example: Website Title Scraper
+
+## File: `web_scraper.py`
+
+```python id="y0y8z6"
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://example.com"
+
+headers = {
+    "User-Agent": "Mozilla/5.0"
+}
+
+response = requests.get(url, headers=headers)
+
+soup = BeautifulSoup(response.text, "html.parser")
+
+titles = soup.find_all("h1")
+
+for title in titles:
+    print(title.text)
+
+## Features
+
+✅ Extract website data
+✅ Use User-Agent headers
+✅ Parse HTML content
+
+# 2. Create Automation Scripts for Repetitive Tasks
+
+## Purpose
+
+Automate repeated manual work.
+
+## Example: File Organizer Automation
+
+## File: `file_organizer.py`
+
+```python id="xv73kk"
+import os
+import shutil
+
+folder = "Downloads"
+
+for file in os.listdir(folder):
+
+    path = os.path.join(folder, file)
+
+    if file.endswith(".pdf"):
+
+        target = os.path.join(folder, "PDFs")
+
+        os.makedirs(target, exist_ok=True)
+
+        shutil.move(path, os.path.join(target, file))
+
+        print(f"{file} moved")
+
+## Features
+
+✅ Automatic file sorting
+✅ Folder creation
+✅ Repetitive task automation
+
+# 3. Develop GUI Applications with Tkinter
+
+## Purpose
+
+Create graphical applications for users.
+
+## Example: Tkinter GUI
+
+## File: `gui_app.py`
+
+```python id="u8ijqn"
+import tkinter as tk
+from tkinter import messagebox
+
+def hello():
+
+    messagebox.showinfo(
+        "Message",
+        "Automation Suite Running"
+    )
+
+root = tk.Tk()
+
+root.title("Automation App")
+
+root.geometry("400x300")
+
+btn = tk.Button(
+    root,
+    text="Run",
+    command=hello,
+    width=20
+)
+
+btn.pack(pady=50)
+
+root.mainloop()
+
+## Features
+
+✅ Buttons
+✅ Windows
+✅ User interaction
+✅ Alerts and messages
+
+# 4. Work with Different Types of APIs
+
+## Purpose
+
+APIs allow applications to communicate with online services.
+
+## Example: Weather API
+
+## File: `api_example.py`
+
+```python id="0j4k9p"
+import requests
+
+url = "https://api.github.com"
+
+response = requests.get(url)
+
+data = response.json()
+
+print(data)
+
+## Features
+
+✅ API requests
+✅ JSON data handling
+✅ External service integration
+
+
+# 5. Build Network Applications and Tools
+
+## Purpose
+
+Network tools communicate between systems.
+
+
+
+## Example: Simple Socket Server
+
+## File: `server.py`
+
+```python id="9aw3kj"
+import socket
+
+server = socket.socket()
+
+server.bind(("localhost", 5000))
+
+server.listen(1)
+
+print("Server Running...")
+
+client, address = server.accept()
+
+print("Connected:", address)
+
+client.send(b"Hello Client")
+
+
+## Example: Client
+
+## File: `client.py`
+
+```python id="guhcqt"
+import socket
+
+client = socket.socket()
+
+client.connect(("localhost", 5000))
+
+message = client.recv(1024)
+
+print(message.decode())
+
+## Features
+
+✅ Network communication
+✅ Client-server connection
+✅ Data transmission
+
+# 6. Create Scheduled Task Automation
+Automation Suite
+│
+├── Web Scraper
+├── File Organizer
+├── GUI Application
+├── API Integration
+├── Network Tool
+└── Task Scheduler
+
+# Technologies Used
+
+| Technology    | Purpose             |
+| ------------- | ------------------- |
+| Python        | Main programming    |
+| Tkinter       | GUI                 |
+| BeautifulSoup | Web scraping        |
+| Requests      | API communication   |
+| Socket        | Network programming |
+| Schedule      | Task scheduling     |
+
