@@ -1,0 +1,110 @@
+Project Structure:
+
+automation_suite/
+├── main.py - Main application entry
+├── config.py - Configuration settings
+├── file_organizer/ - File management module
+├── web_scraper/ - Web scraping module
+├── email_automation/ - Email tools module
+├── system_monitor/ - Monitoring module
+├── task_scheduler/ - Scheduling module
+├── gui/ - User interface
+├── utils/ - Utility functions
+├── logs/ - Application logs
+├── templates/ - Email templates
+└── configs/ - Configuration files
+
+1. File: main.py
+   from gui.app import 
+2. File: config.py
+   APP_NAME = "Automation Suite"
+   VERSION = "1.0"
+3. File: utils/logger.py
+import logging
+
+logging.basicConfig(
+    filename='logs/app.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+def log(message):
+    logging.info(message)
+4. web_scraper/
+   scrape_titles("https://example.com")
+5. email_automation/
+   email_automation/
+  ├── email_sender.py
+6. system_monitor/
+   system_monitor/
+│
+├── monitor.py
+7. task_scheduler/
+   task_scheduler/
+│
+├── scheduler.py
+8. gui/
+│
+├── app.py
+9. utils/
+│
+├── logger.py
+10. logs/
+│
+├── app.log
+11. templates/
+│
+├── welcome_email.txt
+├── alert_email.txt
+12. configs/
+│
+├── settings.json
+├── user_preferences.json
+
+
+
+automation_suite/
+│
+├── main.py
+├── config.py
+│
+├── file_organizer/
+│   ├── __init__.py
+│   └── organizer.py
+│
+├── web_scraper/
+│   ├── __init__.py
+│   └── scraper.py
+│
+├── email_automation/
+│   ├── __init__.py
+│   └── email_sender.py
+│
+├── system_monitor/
+│   ├── __init__.py
+│   └── monitor.py
+│
+├── task_scheduler/
+│   ├── __init__.py
+│   └── scheduler.py
+│
+├── gui/
+│   ├── __init__.py
+│   └── app.py
+│
+├── utils/
+│   ├── __init__.py
+│   └── logger.py
+│
+├── logs/
+│   └── app.log
+│
+├── templates/
+│   └── welcome_email.txt
+│
+├── configs/
+│   └── settings.json
+│
+├── requirements.txt
+└── README.md
+
